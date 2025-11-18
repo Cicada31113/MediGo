@@ -89,11 +89,11 @@ KAKAO_CHANNEL_PUBLIC_ID=_XXXXXX
 KAKAO_CHANNEL_API_URL=https://kapi.kakao.com
 ```
 
-### 예시 (실제 키로 교체하세요):
+### 예시:
 ```env
-KAKAO_REST_API_KEY=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
-KAKAO_ADMIN_KEY=z9y8x7w6v5u4t3s2r1q0p9o8n7m6l5k4
-KAKAO_CHANNEL_PUBLIC_ID=_XXXXXX
+KAKAO_REST_API_KEY=여기에_REST_API_키_기입
+KAKAO_ADMIN_KEY=여기에_Admin_키_기입
+KAKAO_CHANNEL_PUBLIC_ID=여기에_채널_프로필_ID_기입
 KAKAO_CHANNEL_API_URL=https://kapi.kakao.com
 ```
 
