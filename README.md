@@ -37,23 +37,23 @@
 
 </div>
 
-## 📋 프로젝트 개요
+## 프로젝트 개요
 
 처방전 사진을 앱으로 전송하면, 운영팀이 약국 조제 및 배달을 대행하고, 복약 지도 메시지를 앱을 통해 텍스트로 전달하는 서비스입니다.
 
 MVP 단계에서는 Wizard of Oz 방식으로 운영하며, 사용자에게 서비스 가치를 제공하면서 동시에 AI 모델 학습을 위한 데이터를 수집합니다.
 
 ### 핵심 기능 (MVP)
-- 📱 카카오 소셜 로그인
-- 📸 처방전 사진 업로드
-- 🚚 약 배달 주문 및 상태 추적
-- 💊 맞춤형 복약 지도 메시지 수신
-- 💬 카카오톡 채널 메시지 발송
-- 👥 고객 관리 (카카오톡 채널 고객파일)
-- 👨‍💼 관리자 대시보드 (주문 관리, 복약 지도 작성)
-- 🤖 AI 학습 데이터 수집 (OCR + 복약 지도 페어)
+- 카카오 소셜 로그인
+- 처방전 사진 업로드
+- 약 배달 주문 및 상태 추적
+- 맞춤형 복약 지도 메시지 수신
+- 카카오톡 채널 메시지 발송
+- 고객 관리 (카카오톡 채널 고객파일)
+- 관리자 대시보드 (주문 관리, 복약 지도 작성)
+- AI 학습 데이터 수집 (OCR + 복약 지도 페어)
 
-## 🏗️ 기술 스택
+## 기술 스택
 
 ### Backend
 - **Framework**: FastAPI 0.104+
@@ -90,7 +90,7 @@ MVP 단계에서는 Wizard of Oz 방식으로 운영하며, 사용자에게 서�
 - **Container**: Docker
 - **Orchestration**: Docker Compose
 
-## 📁 프로젝트 구조
+## 프로젝트 구조
 
 ```
 medigo/
@@ -123,7 +123,7 @@ medigo/
 └── docker-compose.yml
 ```
 
-## ⚡ 빠른 시작 (5분)
+## 빠른 시작
 
 ### 1단계: 필수 프로그램 설치 확인
 
@@ -180,7 +180,7 @@ alembic upgrade head
 uvicorn app.main:app --reload
 ```
 
-✅ Backend API: http://localhost:8000/docs
+Backend API: http://localhost:8000/docs
 
 ### 4단계: Frontend 실행 (새 터미널)
 
@@ -195,7 +195,7 @@ npm install
 npm run dev
 ```
 
-✅ 사용자 앱: http://localhost:3000
+사용자 앱: http://localhost:3000
 
 ### 5단계: 로그인
 
@@ -203,15 +203,15 @@ npm run dev
 2. "데모 로그인" 버튼 클릭
 3. 홈 화면으로 이동
 
-## 🎉 완료!
+## 완료
 
 이제 다음 기능을 테스트할 수 있습니다:
-- ✅ 처방전 업로드 (이미지 파일)
-- ✅ 주문 생성
-- ✅ 주문 목록 조회
-- ✅ 프로필 관리
+- 처방전 업로드 (이미지 파일)
+- 주문 생성
+- 주문 목록 조회
+- 프로필 관리
 
-## 📦 상세 설치 가이드
+## 상세 설치 가이드
 
 ### Python 환경 (Backend + ML)
 
@@ -248,7 +248,7 @@ npm install
 - **PostgreSQL**: 15 이상
 - **운영체제**: Windows 10/11, macOS 10.15+, Ubuntu 20.04+
 
-## 🔑 카카오톡 채널 설정
+## 카카오톡 채널 설정
 
 ### 1단계: 카카오톡 채널 생성 (2분)
 
@@ -289,9 +289,9 @@ KAKAO_CHANNEL_API_URL=https://kapi.kakao.com
 - [ ] 고객 관리 API 정책 동의 완료
 - [ ] `02 - Backend/.env` 파일에 키 입력 완료
 
-자세한 설정 방법은 `01 - Docs/KAKAO_CHANNEL_SETUP.md` 참조
+더 자세한 설정은 [`01 - Docs/KAKAO_CHANNEL_SETUP.md`](01%20-%20Docs/KAKAO_CHANNEL_SETUP.md)를 확인하세요.
 
-## 🐛 문제 해결
+## 문제 해결
 
 ### Python 버전 문제
 
@@ -360,7 +360,7 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 - **403 Forbidden**: 고객 관리 API 정책 동의 확인
 - **404 Not Found**: 채널 프로필 ID 확인 (앞에 `_` 포함)
 
-## 📊 데이터베이스 스키마
+## 데이터베이스 스키마
 
 주요 테이블:
 - `users` - 사용자 정보 (카카오 OAuth 정보, 배달 주소)
@@ -369,11 +369,11 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 - `medication_guidance` - 복약 지도 (텍스트, AI 생성 여부, 발송 정보)
 - `training_data` - AI 학습 데이터 (약봉투 이미지, OCR 텍스트, 복약 지도)
 
-## 📝 API 문서
+## API 문서
 
 Backend 서버 실행 후:
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
 
 ### 주요 엔드포인트
 
@@ -395,17 +395,17 @@ Backend 서버 실행 후:
 - `PUT /api/v1/admin/orders/{order_id}` - 주문 수정
 - `POST /api/v1/admin/medication-guidance` - 복약 지도 작성
 
-자세한 API 문서는 `01 - Docs/API.md` 참조
+더 자세한 API 문서는 [`01 - Docs/API.md`](01%20-%20Docs/API.md)를 확인하세요.
 
-## 🔐 보안
+## 보안
 
-- ✅ **HTTPS** - 모든 통신 암호화
-- ✅ **JWT** - 토큰 기반 인증 (Access + Refresh)
-- ✅ **S3 암호화** - 서버 사이드 암호화 (AES256)
-- ✅ **DB 암호화** - 민감 정보 암호화
-- ✅ **접근 제어** - RBAC (Role-Based Access Control)
+- HTTPS - 모든 통신 암호화
+- JWT - 토큰 기반 인증 (Access + Refresh)
+- S3 암호화 - 서버 사이드 암호화 (AES256)
+- DB 암호화 - 민감 정보 암호화
+- 접근 제어 - RBAC (Role-Based Access Control)
 
-## 📈 개발 로드맵
+## 개발 로드맵
 
 ### Phase 1: MVP (현재)
 - [x] 프로젝트 구조 설정
@@ -427,7 +427,7 @@ Backend 서버 실행 후:
 - [ ] 복약 알림 기능
 - [ ] 약국 전용 어드민
 
-## 💡 주요 URL
+## 주요 URL
 
 | 서비스 | URL | 설명 |
 |--------|-----|------|
@@ -437,28 +437,28 @@ Backend 서버 실행 후:
 | 관리자 대시보드 | http://localhost:3001 | Admin 패널 |
 | OCR 서비스 | http://localhost:8001 | OCR API |
 
-## ⚠️ 법적 고지
+## 법적 고지
 
-본 서비스는 다음 법규를 준수해야 합니다:
-- **약사법** - 약 배달 관련 규제
-- **의료법** - 비대면 진료 관련 규제
-- **개인정보보호법** - 민감 의료정보 처리
-- **규제 샌드박스** - 서비스 운영 범위
+서비스 운영 시 다음 법규를 준수해야 합니다:
+- 약사법 - 약 배달 관련 규제
+- 의료법 - 비대면 진료 관련 규제
+- 개인정보보호법 - 민감 의료정보 처리
+- 규제 샌드박스 - 서비스 운영 범위
 
-⚠️ **MVP 개발 착수 전, 법률 전문가와 보건복지부 유권해석을 받아야 합니다.**
+MVP 개발 전 법률 전문가와 보건복지부 유권해석을 받는 것을 권장합니다.
 
-## 📚 추가 문서
+## 추가 문서
 
-- 📖 [상세 설정 가이드](01%20-%20Docs/SETUP.md)
-- 📡 [API 문서](01%20-%20Docs/API.md)
-- 🚀 [배포 가이드](01%20-%20Docs/DEPLOYMENT.md)
-- 📋 [프로젝트 문서](01%20-%20Documents/)
+- [상세 설정 가이드](01%20-%20Docs/SETUP.md)
+- [API 문서](01%20-%20Docs/API.md)
+- [배포 가이드](01%20-%20Docs/DEPLOYMENT.md)
+- [프로젝트 문서](01%20-%20Documents/)
 
-## 📞 문의
+## 문의
 
-프로젝트 관련 문의사항은 이슈를 생성해주세요.
+이슈로 문의해주세요.
 
-## 📄 라이선스
+## 라이선스
 
 Private - All Rights Reserved
 
