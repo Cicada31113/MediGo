@@ -1,3 +1,5 @@
+<div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 25px; padding: 40px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+
 <div align="center">
 
 <img src="Assets/images/medi_go_logo_compressed2.png" alt="MediGo Logo" width="300">
@@ -474,3 +476,5 @@ Private - All Rights Reserved
 
 **버전**: 1.0.0  
 **최종 업데이트**: 2024-01-16
+
+</div>
