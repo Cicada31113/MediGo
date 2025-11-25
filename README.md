@@ -22,30 +22,33 @@
 </td>
 <td width="40%" valign="top">
 
-<div align="center">
+<div align="left">
 
 ## 👥 팀 우리동네약배달
 
 <table>
   <tr>
-    <td align="center">
-      <img src="Assets/images/LEE.png" alt="이현민" width="80"><br/>
-      <b>이현민</b><br/>
-      <sub>팀장</sub>
+    <td width="80" valign="middle">
+      <img src="Assets/images/LEE.png" alt="이현민" width="60">
+    </td>
+    <td valign="middle">
+      <b>팀장</b> - 이현민
     </td>
   </tr>
   <tr>
-    <td align="center">
-      <img src="Assets/images/NAM.png" alt="남상훈" width="80"><br/>
-      <b>남상훈</b><br/>
-      <sub>팀원</sub>
+    <td width="80" valign="middle">
+      <img src="Assets/images/NAM.png" alt="남상훈" width="60">
+    </td>
+    <td valign="middle">
+      <b>팀원</b> - 남상훈
     </td>
   </tr>
   <tr>
-    <td align="center">
-      <img src="Assets/images/KWON.png" alt="권덕현" width="80"><br/>
-      <b>권덕현</b><br/>
-      <sub>팀원</sub>
+    <td width="80" valign="middle">
+      <img src="Assets/images/KWON.png" alt="권덕현" width="60">
+    </td>
+    <td valign="middle">
+      <b>팀원</b> - 권덕현
     </td>
   </tr>
 </table>
