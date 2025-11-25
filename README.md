@@ -1,12 +1,8 @@
 <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 25px; padding: 30px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
 
-<table width="100%" cellpadding="0" cellspacing="0">
-<tr>
-<td width="55%" valign="top" style="padding-right: 20px;">
-
 <div align="center">
 
-<img src="Assets/images/medi_go_logo_compressed2.png" alt="MediGo Logo" width="250">
+<img src="Assets/images/medi_go_logo_compressed2.png" alt="MediGo Logo" width="300">
 
 # 메디-고 (Medi-Go) 🏥💊
 
@@ -19,45 +15,37 @@
 
 </div>
 
-</td>
-<td width="45%" valign="middle" style="padding-left: 20px;">
+---
 
-<div align="left" style="margin-top: 0;">
+<div align="center">
 
 ## 👥 팀 우리동네약배달
 
-<table cellpadding="5" cellspacing="0" style="width: 100%;">
+<table cellpadding="10" cellspacing="0">
   <tr>
-    <td width="70" valign="middle" style="padding: 5px;">
-      <img src="Assets/images/LEE.png" alt="이현민" width="70">
-    </td>
-    <td valign="middle" style="padding: 5px;">
-      <b>팀장</b> - 이현민
+    <td align="center" valign="top">
+      <img src="Assets/images/LEE.png" alt="이현민" width="80"><br/>
+      <b>팀장</b><br/>
+      이현민
     </td>
   </tr>
   <tr>
-    <td width="70" valign="middle" style="padding: 5px;">
-      <img src="Assets/images/NAM.png" alt="남상훈" width="70">
-    </td>
-    <td valign="middle" style="padding: 5px;">
-      <b>팀원</b> - 남상훈
+    <td align="center" valign="top">
+      <img src="Assets/images/NAM.png" alt="남상훈" width="80"><br/>
+      <b>팀원</b><br/>
+      남상훈
     </td>
   </tr>
   <tr>
-    <td width="70" valign="middle" style="padding: 5px;">
-      <img src="Assets/images/KWON.png" alt="권덕현" width="70">
-    </td>
-    <td valign="middle" style="padding: 5px;">
-      <b>팀원</b> - 권덕현
+    <td align="center" valign="top">
+      <img src="Assets/images/KWON.png" alt="권덕현" width="80"><br/>
+      <b>팀원</b><br/>
+      권덕현
     </td>
   </tr>
 </table>
 
 </div>
-
-</td>
-</tr>
-</table>
 
 ---
 
