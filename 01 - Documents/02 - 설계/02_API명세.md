@@ -45,7 +45,7 @@
 - Content-Type: `multipart/form-data`
 - 필드:
   - `file`: 이미지 파일
-  - `patient_name` (옵션, 기본값: “데모 사용자”)
+  - `patient_name` (옵션, 기본값: "데모 사용자")
   - `birth` (옵션)
 - 응답:
 ```json
@@ -86,3 +86,4 @@
 ```json
 { "status": "delivered" }
 ```
+
