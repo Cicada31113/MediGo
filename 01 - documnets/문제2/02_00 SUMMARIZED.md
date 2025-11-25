@@ -1,4 +1,4 @@
-# 문제2 보완(멘토)
+# 문제2 SUMMARIZED
 
 ## 1. 사용자 흐름(User Flow)
 
