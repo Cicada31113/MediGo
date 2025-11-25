@@ -1,6 +1,17 @@
+<div align="center">
+
+![MediGo Logo](Assets/images/medi_go_logo_compressed2.png)
+
 # 메디-고 (Medi-Go) 🏥💊
 
-AI 기반 약 배달 및 복약 지도 서비스
+**AI 기반 약 배달 및 복약 지도 서비스**
+
+[![License](https://img.shields.io/badge/license-Private-red.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-18+-61dafb.svg)](https://reactjs.org/)
+
+</div>
 
 ## 📋 프로젝트 개요
 
