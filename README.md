@@ -64,24 +64,7 @@
 
 </div>
 
-### 시연 스크린샷
-
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="50%">
-  <img src="Assets/images/시연사진.jpg" alt="MediGo 시연 사진 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <br/><sub>카카오톡 채널을 통한 서비스 이용</sub>
-</td>
-<td align="center" width="50%">
-  <img src="Assets/images/시연사진2.webp" alt="MediGo 시연 사진 2" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <br/><sub>처방전 업로드 및 주문 프로세스</sub>
-</td>
-</tr>
-</table>
-
-</div>
+<sub>※ 위 시연 영상은 웹앱(React) 버전의 데모입니다.</sub>
 
 ### 사용자 플로우
 
@@ -203,6 +186,27 @@ mindmap
 - 고객 관리 (카카오톡 채널 고객파일)
 - 관리자 대시보드 (주문 관리, 복약 지도 작성)
 - AI 학습 데이터 수집 (OCR + 복약 지도 페어)
+
+### 카카오톡 채널을 통한 서비스 이용
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="50%">
+  <img src="Assets/images/시연사진.jpg" alt="카카오톡 채널 시연 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <br/><sub><b>카카오톡 채널을 통한 서비스 이용</b></sub>
+</td>
+<td align="center" width="50%">
+  <img src="Assets/images/시연사진2.webp" alt="카카오톡 채널 시연 2" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <br/><sub><b>처방전 업로드 및 주문 프로세스</b></sub>
+</td>
+</tr>
+</table>
+
+<sub>※ MVP 단계에서는 카카오톡 플러스친구 채널을 통한 실제 서비스 운영을 진행했습니다.</sub>
+
+</div>
 
 ## 기술 스택
 
