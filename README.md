@@ -43,6 +43,14 @@
 
 처방전 사진을 앱으로 전송하면, 운영팀이 약국 조제 및 배달을 대행하고, 복약 지도 메시지를 앱을 통해 텍스트로 전달하는 서비스입니다.
 
+### 시연 영상
+
+<div align="center">
+
+[![시연 영상 재생하기](https://img.shields.io/badge/▶️-시연_영상_재생하기-FF6B6B?style=for-the-badge&logo=github)](https://cicada31113.github.io/MediGo/)
+
+</div>
+
 ### 사용자 플로우
 
 ```mermaid
@@ -99,14 +107,6 @@ graph TB
     style F fill:#fff9c4
     style G fill:#fff9c4
 ```
-
-### 시연 영상
-
-<div align="center">
-
-[![시연 영상 재생하기](https://img.shields.io/badge/▶️-시연_영상_재생하기-FF6B6B?style=for-the-badge&logo=github)](https://cicada31113.github.io/MediGo/)
-
-</div>
 
 MVP 단계에서는 Wizard of Oz 방식으로 운영하며, 사용자에게 서비스 가치를 제공하면서 동시에 AI 모델 학습을 위한 데이터를 수집합니다.
 
