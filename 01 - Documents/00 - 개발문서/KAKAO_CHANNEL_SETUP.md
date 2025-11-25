@@ -54,7 +54,7 @@
 
 ## 🔧 환경 변수 설정
 
-`backend/.env` 파일에 다음 정보 추가:
+`02 - Backend/.env` 파일에 다음 정보 추가:
 
 ```env
 # Kakao Talk Channel
@@ -224,7 +224,7 @@ await kakao_channel_service.send_medication_guidance_message(
 
 ```bash
 # Backend 서버 실행
-cd backend
+cd "02 - Backend"
 uvicorn app.main:app --reload
 
 # API 테스트 (Thunder Client, Postman 등)

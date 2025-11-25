@@ -41,10 +41,11 @@ pip install -r requirements.txt
 # Backend 환경 설정
 echo ""
 echo -e "${YELLOW}Backend 환경 설정 중...${NC}"
-if [ ! -f "backend/.env" ]; then
-    cp backend/env.example backend/.env
+BACKEND_PATH="02 - Backend"
+if [ ! -f "$BACKEND_PATH/.env" ]; then
+    cp "$BACKEND_PATH/env.example" "$BACKEND_PATH/.env"
     echo -e "${GREEN}✓ .env 파일 생성 완료${NC}"
-    echo -e "${GRAY}  → backend/.env 파일을 편집하여 설정을 완료하세요${NC}"
+    echo -e "${GRAY}  → $BACKEND_PATH/.env 파일을 편집하여 설정을 완료하세요${NC}"
 else
     echo -e "${GREEN}✓ .env 파일이 이미 존재합니다${NC}"
 fi
@@ -65,7 +66,7 @@ fi
 if [ "$NODE_INSTALLED" = true ]; then
     echo ""
     echo -e "${YELLOW}Frontend 패키지 설치 중...${NC}"
-    cd frontend
+    cd "03 - Frontend"
     npm install
     cd ..
     echo -e "${GREEN}✓ Frontend 설치 완료${NC}"
@@ -73,7 +74,7 @@ if [ "$NODE_INSTALLED" = true ]; then
     # Admin 설치
     echo ""
     echo -e "${YELLOW}Admin 패키지 설치 중...${NC}"
-    cd admin
+    cd "04 - Admin"
     npm install
     cd ..
     echo -e "${GREEN}✓ Admin 설치 완료${NC}"
@@ -86,13 +87,12 @@ echo -e "${GREEN}  설치 완료!${NC}"
 echo -e "${CYAN}============================================${NC}"
 echo ""
 echo -e "${YELLOW}다음 단계:${NC}"
-echo -e "${NC}1. backend/.env 파일 설정${NC}"
+echo -e "${NC}1. $BACKEND_PATH/.env 파일 설정${NC}"
 echo -e "${NC}2. PostgreSQL 데이터베이스 생성${NC}"
 echo -e "${NC}3. 서버 실행:${NC}"
-echo -e "${GRAY}   cd backend${NC}"
+echo -e "${GRAY}   cd \"$BACKEND_PATH\"${NC}"
 echo -e "${GRAY}   source ../venv/bin/activate${NC}"
 echo -e "${GRAY}   python -m uvicorn app.main:app --reload${NC}"
 echo ""
-echo -e "${CYAN}자세한 내용은 QUICKSTART.md를 참고하세요!${NC}"
+echo -e "${CYAN}자세한 내용은 README.md를 참고하세요!${NC}"
 echo ""
-

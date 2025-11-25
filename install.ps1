@@ -32,10 +32,11 @@ pip install -r requirements.txt
 # Backend 환경 설정
 Write-Host ""
 Write-Host "Backend 환경 설정 중..." -ForegroundColor Yellow
-if (!(Test-Path "backend\.env")) {
-    Copy-Item "backend\env.example" "backend\.env"
+$backendPath = "02 - Backend"
+if (!(Test-Path "$backendPath\.env")) {
+    Copy-Item "$backendPath\env.example" "$backendPath\.env"
     Write-Host "✓ .env 파일 생성 완료" -ForegroundColor Green
-    Write-Host "  → backend\.env 파일을 편집하여 설정을 완료하세요" -ForegroundColor Gray
+    Write-Host "  → $backendPath\.env 파일을 편집하여 설정을 완료하세요" -ForegroundColor Gray
 } else {
     Write-Host "✓ .env 파일이 이미 존재합니다" -ForegroundColor Green
 }
@@ -56,7 +57,7 @@ try {
 if ($nodeInstalled) {
     Write-Host ""
     Write-Host "Frontend 패키지 설치 중..." -ForegroundColor Yellow
-    Set-Location frontend
+    Set-Location "03 - Frontend"
     npm install
     Set-Location ..
     Write-Host "✓ Frontend 설치 완료" -ForegroundColor Green
@@ -64,7 +65,7 @@ if ($nodeInstalled) {
     # Admin 설치
     Write-Host ""
     Write-Host "Admin 패키지 설치 중..." -ForegroundColor Yellow
-    Set-Location admin
+    Set-Location "04 - Admin"
     npm install
     Set-Location ..
     Write-Host "✓ Admin 설치 완료" -ForegroundColor Green
@@ -77,12 +78,11 @@ Write-Host "  설치 완료!" -ForegroundColor Green
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "다음 단계:" -ForegroundColor Yellow
-Write-Host "1. backend\.env 파일 설정" -ForegroundColor White
+Write-Host "1. $backendPath\.env 파일 설정" -ForegroundColor White
 Write-Host "2. PostgreSQL 데이터베이스 생성" -ForegroundColor White
 Write-Host "3. 서버 실행:" -ForegroundColor White
-Write-Host "   cd backend" -ForegroundColor Gray
+Write-Host "   cd `"$backendPath`"" -ForegroundColor Gray
 Write-Host "   python -m uvicorn app.main:app --reload" -ForegroundColor Gray
 Write-Host ""
-Write-Host "자세한 내용은 QUICKSTART.md를 참고하세요!" -ForegroundColor Cyan
+Write-Host "자세한 내용은 README.md를 참고하세요!" -ForegroundColor Cyan
 Write-Host ""
-

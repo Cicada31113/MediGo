@@ -12,8 +12,8 @@
 ### Backend (.env)
 
 ```bash
-cd backend
-cp .env.example .env
+cd "02 - Backend"
+cp env.example .env
 ```
 
 `.env` 파일을 열어 다음 값들을 설정하세요:
@@ -56,7 +56,7 @@ GRANT ALL PRIVILEGES ON DATABASE medigo_db TO medigo_user;
 ## 3. Backend 설정
 
 ```bash
-cd backend
+cd "02 - Backend"
 
 # 가상환경 생성
 python -m venv venv
@@ -77,7 +77,7 @@ API 문서: http://localhost:8000/docs
 ## 4. Frontend 설정
 
 ```bash
-cd frontend
+cd "03 - Frontend"
 
 # 의존성 설치
 npm install
@@ -91,7 +91,7 @@ npm run dev
 ## 5. Admin 대시보드 설정
 
 ```bash
-cd admin
+cd "04 - Admin"
 
 # 의존성 설치
 npm install
@@ -105,7 +105,7 @@ npm run dev
 ## 6. ML/OCR 서비스 설정
 
 ```bash
-cd ml
+cd "05 - ML"
 
 # 가상환경 생성
 python -m venv venv
