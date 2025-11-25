@@ -1,6 +1,11 @@
 #!/bin/bash
 # 메디-고 자동 설치 스크립트 (Mac/Linux)
 
+# 프로젝트 루트로 이동
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
+cd "$PROJECT_ROOT"
+
 echo "============================================"
 echo "  메디-고 (Medi-Go) 설치 스크립트"
 echo "============================================"
@@ -96,3 +101,4 @@ echo -e "${GRAY}   python -m uvicorn app.main:app --reload${NC}"
 echo ""
 echo -e "${CYAN}자세한 내용은 README.md를 참고하세요!${NC}"
 echo ""
+

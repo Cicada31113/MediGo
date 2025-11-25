@@ -1,6 +1,11 @@
 # 메디-고 Backend만 빠른 설치
 # ML/OCR 제외, API 서버만 설치
 
+# 프로젝트 루트로 이동
+$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$projectRoot = Split-Path -Parent $scriptPath
+Set-Location $projectRoot
+
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host "  메디-고 Backend 빠른 설치" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
@@ -61,3 +66,4 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "❌ 설치 중 오류 발생" -ForegroundColor Red
     Write-Host "   위 오류 메시지를 확인하세요" -ForegroundColor Yellow
 }
+

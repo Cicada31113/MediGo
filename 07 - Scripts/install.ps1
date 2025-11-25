@@ -1,5 +1,10 @@
 # 메디-고 자동 설치 스크립트 (Windows PowerShell)
 
+# 프로젝트 루트로 이동
+$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$projectRoot = Split-Path -Parent $scriptPath
+Set-Location $projectRoot
+
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host "  메디-고 (Medi-Go) 설치 스크립트" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
@@ -86,3 +91,4 @@ Write-Host "   python -m uvicorn app.main:app --reload" -ForegroundColor Gray
 Write-Host ""
 Write-Host "자세한 내용은 README.md를 참고하세요!" -ForegroundColor Cyan
 Write-Host ""
+
