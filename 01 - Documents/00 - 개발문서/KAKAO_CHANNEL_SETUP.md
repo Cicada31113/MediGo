@@ -280,7 +280,7 @@ uvicorn app.main:app --reload
 ## ⚠️ 주의사항
 
 1. **쿼터 제한**
-   - API 호출 횟수 제한이 있습니다
+   - API 호출 횟수 제한이 존재합니다
    - [카카오 디벨로퍼스 - 쿼터](https://developers.kakao.com/docs/latest/ko/getting-started/quota) 참조
 
 2. **개인정보 처리**

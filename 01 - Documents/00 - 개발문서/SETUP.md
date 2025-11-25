@@ -16,7 +16,7 @@ cd "02 - Backend"
 cp env.example .env
 ```
 
-`.env` 파일을 열어 다음 값들을 설정하세요:
+`.env` 파일을 열어 다음 값들을 설정합니다:
 
 ```env
 # 필수 설정
@@ -191,7 +191,7 @@ psql -h localhost -U postgres -d medigo_db
 - Admin: 3001
 - PostgreSQL: 5432
 
-이미 사용 중인 포트가 있다면 설정 파일에서 변경하세요.
+이미 사용 중인 포트가 있는 경우 설정 파일에서 변경합니다.
 
 ### Python 패키지 설치 오류
 

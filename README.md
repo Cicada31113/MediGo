@@ -205,7 +205,7 @@ npm run dev
 
 ## 완료
 
-이제 다음 기능을 테스트할 수 있습니다:
+다음 기능을 테스트할 수 있습니다:
 - 처방전 업로드 (이미지 파일)
 - 주문 생성
 - 주문 목록 조회
@@ -289,13 +289,13 @@ KAKAO_CHANNEL_API_URL=https://kapi.kakao.com
 - [ ] 고객 관리 API 정책 동의 완료
 - [ ] `02 - Backend/.env` 파일에 키 입력 완료
 
-더 자세한 설정은 [`01 - Docs/KAKAO_CHANNEL_SETUP.md`](01%20-%20Docs/KAKAO_CHANNEL_SETUP.md)를 확인하세요.
+더 자세한 설정은 [`01 - Docs/KAKAO_CHANNEL_SETUP.md`](01%20-%20Docs/KAKAO_CHANNEL_SETUP.md)를 참고하세요.
 
 ## 문제 해결
 
 ### Python 버전 문제
 
-**문제**: Python 3.13은 너무 최신이라 일부 패키지 호환성 문제 발생
+**문제**: Python 3.13은 최신 버전이어서 일부 패키지 호환성 문제가 발생할 수 있습니다
 
 **해결**: Python 3.11 사용 (권장)
 
@@ -395,7 +395,7 @@ Backend 서버 실행 후:
 - `PUT /api/v1/admin/orders/{order_id}` - 주문 수정
 - `POST /api/v1/admin/medication-guidance` - 복약 지도 작성
 
-더 자세한 API 문서는 [`01 - Docs/API.md`](01%20-%20Docs/API.md)를 확인하세요.
+더 자세한 API 문서는 [`01 - Docs/API.md`](01%20-%20Docs/API.md)를 참고하세요.
 
 ## 보안
 
@@ -456,7 +456,7 @@ MVP 개발 전 법률 전문가와 보건복지부 유권해석을 받는 것을
 
 ## 문의
 
-이슈로 문의해주세요.
+이슈로 문의 바랍니다.
 
 ## 라이선스
 
