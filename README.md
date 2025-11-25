@@ -21,22 +21,20 @@
 
 ## 👥 팀 우리동네약배달
 
-<table cellpadding="10" cellspacing="0">
+<table width="100%" cellpadding="15" cellspacing="0">
   <tr>
-    <td align="center" valign="top" colspan="2">
-      <img src="Assets/images/LEE.png" alt="이현민" width="80"><br/>
+    <td width="33.33%" align="center" valign="top">
+      <img src="Assets/images/LEE.png" alt="이현민" width="100"><br/>
       <b>팀장</b><br/>
       이현민
     </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" style="padding-right: 30px;">
-      <img src="Assets/images/NAM.png" alt="남상훈" width="80"><br/>
+    <td width="33.33%" align="center" valign="top">
+      <img src="Assets/images/NAM.png" alt="남상훈" width="100"><br/>
       <b>팀원</b><br/>
       남상훈
     </td>
-    <td align="center" valign="top" style="padding-left: 30px;">
-      <img src="Assets/images/KWON.png" alt="권덕현" width="80"><br/>
+    <td width="33.33%" align="center" valign="top">
+      <img src="Assets/images/KWON.png" alt="권덕현" width="100"><br/>
       <b>팀원</b><br/>
       권덕현
     </td>
