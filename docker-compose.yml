@@ -20,8 +20,8 @@ services:
   # Backend API
   backend:
     build:
-      context: ./02 - Backend
-      dockerfile: ../06 - Docker/Dockerfile.backend
+      context: .
+      dockerfile: ./06 - Docker/Dockerfile.backend
     container_name: medigo-backend
     restart: always
     ports:
@@ -38,8 +38,8 @@ services:
   # OCR Service
   ocr:
     build:
-      context: ./05 - ML
-      dockerfile: ../06 - Docker/Dockerfile.ocr
+      context: .
+      dockerfile: ./06 - Docker/Dockerfile.ocr
     container_name: medigo-ocr
     restart: always
     ports:

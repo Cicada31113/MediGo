@@ -43,10 +43,19 @@ pytest>=8.3.0
 pytest-asyncio>=0.24.0
 pytest-cov>=6.0.0
 
+# Type Hints (for better type checking)
+typing-extensions>=4.8.0
+
 # Development
 black>=24.11.0
 flake8>=7.1.0
 mypy>=1.14.0
+
+# Production Server (optional, uncomment for production)
+# gunicorn>=21.2.0
+
+# Logging & Monitoring (optional, uncomment if using CloudWatch)
+# watchtower>=3.0.0
 
 # -----------------------------------------------------------------------------
 # ML/OCR Dependencies (선택사항)
@@ -63,6 +72,12 @@ transformers>=4.48.0
 
 # Scientific Computing
 numpy>=1.26.0
+
+# Database (for ML training data preparation)
+psycopg2-binary>=2.9.10
+
+# HTTP Client (for image URL fetching in OCR)
+requests>=2.31.0
 
 # -----------------------------------------------------------------------------
 # 참고사항

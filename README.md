@@ -64,6 +64,25 @@
 
 </div>
 
+### 시연 스크린샷
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="50%">
+  <img src="Assets/images/시연사진.jpg" alt="MediGo 시연 사진 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <br/><sub>카카오톡 채널을 통한 서비스 이용</sub>
+</td>
+<td align="center" width="50%">
+  <img src="Assets/images/시연사진2.webp" alt="MediGo 시연 사진 2" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <br/><sub>처방전 업로드 및 주문 프로세스</sub>
+</td>
+</tr>
+</table>
+
+</div>
+
 ### 사용자 플로우
 
 ```mermaid
@@ -251,6 +270,13 @@ graph TB
 - **Language**: TypeScript 5+
 - **UI Library**: Material-UI (MUI) + React Admin
 - **State Management**: React Query + Zustand
+
+<div align="center" style="margin: 20px 0;">
+
+<img src="Assets/images/관리자페이지.webp" alt="MediGo 관리자 대시보드" style="max-width: 90%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.15);">
+<br/><sub><b>관리자 대시보드</b> - 주문 관리 및 복약 지도 작성</sub>
+
+</div>
 
 ### AI/ML
 - **OCR**: EasyOCR
