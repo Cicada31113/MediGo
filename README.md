@@ -1,5 +1,9 @@
 <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 25px; padding: 40px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
 
+<table>
+<tr>
+<td width="60%" valign="top">
+
 <div align="center">
 
 <img src="Assets/images/medi_go_logo_compressed2.png" alt="MediGo Logo" width="300">
@@ -13,7 +17,12 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18+-61dafb.svg)](https://reactjs.org/)
 
----
+</div>
+
+</td>
+<td width="40%" valign="top">
+
+<div align="center">
 
 ## 👥 팀 우리동네약배달
 
@@ -38,6 +47,12 @@
 </table>
 
 </div>
+
+</td>
+</tr>
+</table>
+
+---
 
 ## 프로젝트 개요
 
