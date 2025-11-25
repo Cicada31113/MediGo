@@ -10,8 +10,15 @@
 
 [![License](https://img.shields.io/badge/license-Private-red.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2+-3178c6.svg)](https://www.typescriptlang.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.121+-green.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18+-61dafb.svg)](https://reactjs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791.svg)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-3.8+-2496ed.svg)](https://www.docker.com/)
+[![Material-UI](https://img.shields.io/badge/Material--UI-5.14+-0081cb.svg)](https://mui.com/)
+[![AWS](https://img.shields.io/badge/AWS-EC2/S3/RDS-ff9900.svg)](https://aws.amazon.com/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.6+-ee4c2c.svg)](https://pytorch.org/)
+[![EasyOCR](https://img.shields.io/badge/EasyOCR-1.7+-ff6b6b.svg)](https://github.com/JaidedAI/EasyOCR)
 
 </div>
 
