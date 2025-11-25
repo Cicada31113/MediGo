@@ -45,19 +45,7 @@
 
 <div align="center">
 
-[![시연 영상](https://img.shields.io/badge/▶️-시연_영상_재생-FF6B6B?style=for-the-badge&logo=github)](https://cicada31113.github.io/MediGo/)
-
-**👉 [시연 영상 재생하기](https://cicada31113.github.io/MediGo/)**
-
-<details>
-<summary>📹 비디오 직접 보기 (일부 브라우저에서만 작동)</summary>
-
-<video width="800" controls>
-  <source src="https://github.com/cicada31113/MediGo/raw/main/시연영상.mp4" type="video/mp4">
-  비디오를 재생할 수 없습니다. 위 링크를 클릭하여 GitHub Pages에서 재생하세요.
-</video>
-
-</details>
+[![시연 영상 재생하기](https://img.shields.io/badge/▶️-시연_영상_재생하기-FF6B6B?style=for-the-badge&logo=github)](https://cicada31113.github.io/MediGo/)
 
 </div>
 
