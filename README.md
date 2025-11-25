@@ -43,6 +43,63 @@
 
 처방전 사진을 앱으로 전송하면, 운영팀이 약국 조제 및 배달을 대행하고, 복약 지도 메시지를 앱을 통해 텍스트로 전달하는 서비스입니다.
 
+### 사용자 플로우
+
+```mermaid
+graph LR
+    A[병원 진료] --> B[처방전 발급]
+    B --> C[MediGo 앱<br/>처방전 업로드]
+    C --> D[OCR 처리]
+    D --> E[주문 생성]
+    E --> F[약국 조제]
+    F --> G[배달 시작]
+    G --> H[약 배달 완료]
+    H --> I[복약 지도<br/>카카오톡 발송]
+    
+    style C fill:#e3f2fd
+    style D fill:#fff9c4
+    style I fill:#c8e6c9
+```
+
+### 시스템 아키텍처
+
+```mermaid
+graph TB
+    subgraph "Frontend"
+        A[React 사용자 앱]
+        B[React Admin 대시보드]
+    end
+    
+    subgraph "Backend"
+        C[FastAPI 서버]
+        D[PostgreSQL DB]
+        E[AWS S3]
+    end
+    
+    subgraph "AI/ML"
+        F[OCR Service]
+        G[LLM Model<br/>향후 구현]
+    end
+    
+    subgraph "External"
+        H[카카오 OAuth]
+        I[카카오톡 채널]
+    end
+    
+    A --> C
+    B --> C
+    C --> D
+    C --> E
+    C --> F
+    F --> G
+    C --> H
+    C --> I
+    
+    style C fill:#e3f2fd
+    style F fill:#fff9c4
+    style G fill:#fff9c4
+```
+
 ### 시연 영상
 
 <div align="center">
@@ -53,7 +110,59 @@
 
 MVP 단계에서는 Wizard of Oz 방식으로 운영하며, 사용자에게 서비스 가치를 제공하면서 동시에 AI 모델 학습을 위한 데이터를 수집합니다.
 
+### Wizard of Oz 운영 방식
+
+```mermaid
+graph TB
+    A[사용자 주문] --> B[OCR 자동 처리]
+    B --> C[운영자 수동 검토]
+    C --> D[복약 지도 수동 작성]
+    D --> E[카카오톡 발송]
+    C --> F[학습 데이터 저장]
+    F --> G[향후 AI 자동화]
+    
+    style B fill:#e3f2fd
+    style C fill:#fff9c4
+    style D fill:#fff9c4
+    style G fill:#c8e6c9
+    
+    classDef manual fill:#fff9c4,stroke:#f57c00
+    classDef auto fill:#c8e6c9,stroke:#388e3c
+    classDef future fill:#e1bee7,stroke:#7b1fa2
+    
+    class C,D manual
+    class B,E auto
+    class G future
+```
+
+**현재 (MVP)**: 운영자가 수동으로 복약 지도 작성 → 데이터 수집  
+**향후**: AI가 자동으로 복약 지도 생성
+
 ### 핵심 기능 (MVP)
+
+```mermaid
+mindmap
+  root((MediGo<br/>핵심 기능))
+    사용자 기능
+      카카오 소셜 로그인
+      처방전 사진 업로드
+      약 배달 주문
+      주문 상태 추적
+      복약 지도 수신
+    관리자 기능
+      주문 관리
+      복약 지도 작성
+      고객 관리
+    AI 기능
+      OCR 처리
+      데이터 수집
+      향후 LLM 자동화
+    통합 기능
+      카카오톡 채널 연동
+      AWS S3 이미지 저장
+```
+
+**주요 기능:**
 - 카카오 소셜 로그인
 - 처방전 사진 업로드
 - 약 배달 주문 및 상태 추적
@@ -64,6 +173,47 @@ MVP 단계에서는 Wizard of Oz 방식으로 운영하며, 사용자에게 서�
 - AI 학습 데이터 수집 (OCR + 복약 지도 페어)
 
 ## 기술 스택
+
+### 기술 스택 다이어그램
+
+```mermaid
+graph TB
+    subgraph "Frontend"
+        FE1[React 18]
+        FE2[TypeScript]
+        FE3[Material-UI]
+    end
+    
+    subgraph "Backend"
+        BE1[FastAPI]
+        BE2[Python 3.11+]
+        BE3[PostgreSQL]
+        BE4[SQLAlchemy]
+    end
+    
+    subgraph "AI/ML"
+        ML1[EasyOCR]
+        ML2[PyTorch]
+        ML3[Transformers]
+    end
+    
+    subgraph "Infrastructure"
+        INF1[AWS EC2/S3]
+        INF2[Docker]
+        INF3[Docker Compose]
+    end
+    
+    FE1 --> BE1
+    BE1 --> BE3
+    BE1 --> ML1
+    ML1 --> ML2
+    BE1 --> INF1
+    
+    style FE1 fill:#61dafb
+    style BE1 fill:#009688
+    style ML1 fill:#ff9800
+    style INF1 fill:#ff9900
+```
 
 ### Backend
 - **Framework**: FastAPI 0.104+
@@ -372,9 +522,101 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 
 ## 데이터베이스 스키마
 
-주요 테이블:
+### ERD (Entity Relationship Diagram)
+
+```mermaid
+erDiagram
+    USERS ||--o{ ORDERS : "주문"
+    ORDERS ||--|| PRESCRIPTIONS : "처방전"
+    ORDERS ||--o| MEDICATION_GUIDANCE : "복약지도"
+    PRESCRIPTIONS ||--o{ TRAINING_DATA : "학습데이터"
+    
+    USERS {
+        int id PK
+        string kakao_id UK
+        string name
+        string email
+        string phone
+        string delivery_address
+        datetime created_at
+    }
+    
+    ORDERS {
+        int id PK
+        int user_id FK
+        enum status
+        string delivery_address
+        string delivery_phone
+        datetime created_at
+        datetime updated_at
+    }
+    
+    PRESCRIPTIONS {
+        int id PK
+        int order_id FK
+        string image_url
+        text ocr_text
+        datetime created_at
+    }
+    
+    MEDICATION_GUIDANCE {
+        int id PK
+        int order_id FK
+        text guidance_text
+        boolean is_ai_generated
+        datetime sent_at
+        datetime created_at
+    }
+    
+    TRAINING_DATA {
+        int id PK
+        int prescription_id FK
+        string image_url
+        text ocr_text
+        text guidance_text
+        datetime created_at
+    }
+```
+
+### 주요 테이블 설명
+
 - `users` - 사용자 정보 (카카오 OAuth 정보, 배달 주소)
 - `orders` - 주문 정보 (상태: submitted → processing → delivering → completed)
+
+### 주문 상태 플로우
+
+```mermaid
+stateDiagram-v2
+    [*] --> submitted: 주문 생성
+    submitted --> processing: 운영자 확인
+    processing --> delivering: 약국 조제 완료
+    delivering --> completed: 배달 완료
+    completed --> [*]
+    
+    processing --> cancelled: 취소
+    delivering --> cancelled: 취소
+    cancelled --> [*]
+    
+    note right of submitted
+        처방전 업로드 완료
+        OCR 처리 대기
+    end note
+    
+    note right of processing
+        약국 조제 중
+        복약 지도 작성 중
+    end note
+    
+    note right of delivering
+        배달원 배정 완료
+        배달 진행 중
+    end note
+    
+    note right of completed
+        약 수령 완료
+        복약 지도 발송 완료
+    end note
+```
 - `prescriptions` - 처방전 정보 (이미지 S3 URL, OCR 텍스트)
 - `medication_guidance` - 복약 지도 (텍스트, AI 생성 여부, 발송 정보)
 - `training_data` - AI 학습 데이터 (약봉투 이미지, OCR 텍스트, 복약 지도)
@@ -384,6 +626,34 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 Backend 서버 실행 후:
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
+
+### API 플로우
+
+```mermaid
+sequenceDiagram
+    participant U as 사용자
+    participant F as Frontend
+    participant B as Backend API
+    participant D as Database
+    participant O as OCR Service
+    participant K as 카카오톡
+    
+    U->>F: 카카오 로그인
+    F->>B: POST /auth/kakao
+    B->>D: 사용자 정보 저장
+    B-->>F: JWT 토큰 발급
+    
+    U->>F: 처방전 업로드
+    F->>B: POST /orders (이미지)
+    B->>O: OCR 처리 요청
+    O-->>B: OCR 텍스트 반환
+    B->>D: 주문 저장
+    B-->>F: 주문 생성 완료
+    
+    B->>D: 주문 상태 업데이트
+    B->>K: 복약 지도 메시지 발송
+    K-->>U: 카카오톡 알림
+```
 
 ### 주요 엔드포인트
 
@@ -416,6 +686,33 @@ Backend 서버 실행 후:
 - 접근 제어 - RBAC (Role-Based Access Control)
 
 ## 개발 로드맵
+
+### 로드맵 타임라인
+
+```mermaid
+gantt
+    title MediGo 개발 로드맵
+    dateFormat YYYY-MM-DD
+    section Phase 1: MVP
+    프로젝트 구조 설정    :done, 2024-01-01, 2024-01-07
+    백엔드 API 개발        :active, 2024-01-08, 2024-02-15
+    프론트엔드 개발        :active, 2024-01-15, 2024-02-20
+    관리자 대시보드        :2024-02-01, 2024-02-25
+    OCR 통합              :2024-02-10, 2024-02-28
+    카카오 로그인 연동     :2024-02-15, 2024-03-01
+    
+    section Phase 2: AI 모델
+    데이터 수집 (500+)     :2024-03-01, 2024-05-01
+    OCR 전처리            :2024-04-01, 2024-05-15
+    LLM 파인튜닝          :2024-05-01, 2024-07-01
+    모델 배포             :2024-07-01, 2024-07-15
+    
+    section Phase 3: 고도화
+    실시간 배달 추적      :2024-07-15, 2024-08-15
+    인앱 결제 연동        :2024-08-01, 2024-09-01
+    복약 알림 기능        :2024-08-15, 2024-09-15
+    약국 전용 어드민      :2024-09-01, 2024-10-01
+```
 
 ### Phase 1: MVP (현재)
 - [x] 프로젝트 구조 설정
