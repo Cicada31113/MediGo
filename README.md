@@ -1,6 +1,6 @@
 <div align="center">
 
-![MediGo Logo](Assets/images/medi_go_logo_compressed2.png)
+<img src="Assets/images/medi_go_logo_compressed2.png" alt="MediGo Logo" width="300">
 
 # 메디-고 (Medi-Go) 🏥💊
 
@@ -10,6 +10,30 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18+-61dafb.svg)](https://reactjs.org/)
+
+---
+
+## 👥 팀 우리동네약배달
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Assets/images/LEE.png" alt="이현민" width="100"><br/>
+      <b>이현민</b><br/>
+      <sub>팀장</sub>
+    </td>
+    <td align="center">
+      <img src="Assets/images/NAM.png" alt="남상훈" width="100"><br/>
+      <b>남상훈</b><br/>
+      <sub>팀원</sub>
+    </td>
+    <td align="center">
+      <img src="Assets/images/KWON.png" alt="권덕현" width="100"><br/>
+      <b>권덕현</b><br/>
+      <sub>팀원</sub>
+    </td>
+  </tr>
+</table>
 
 </div>
 
