@@ -29,17 +29,21 @@
 <table>
   <tr>
     <td align="center">
-      <img src="Assets/images/LEE.png" alt="이현민" width="100"><br/>
+      <img src="Assets/images/LEE.png" alt="이현민" width="80"><br/>
       <b>이현민</b><br/>
       <sub>팀장</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
-      <img src="Assets/images/NAM.png" alt="남상훈" width="100"><br/>
+      <img src="Assets/images/NAM.png" alt="남상훈" width="80"><br/>
       <b>남상훈</b><br/>
       <sub>팀원</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
-      <img src="Assets/images/KWON.png" alt="권덕현" width="100"><br/>
+      <img src="Assets/images/KWON.png" alt="권덕현" width="80"><br/>
       <b>권덕현</b><br/>
       <sub>팀원</sub>
     </td>
